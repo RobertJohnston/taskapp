@@ -1,5 +1,7 @@
 class TasksController < ApplicationController
 
+  # should make one form for edit and ...
+
   def index
     @tasks = Task.all
     # get /tasks

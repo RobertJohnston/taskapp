@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   # resources :tasks
+  # Best practices to always use resources :tasks
+  # this allows everyone to identify routes by following conventions.
 
   # Must know exactly how this code works because replaces all routing code below.
   # It gives the conventions that new and edit are immediately redirect_to by create.
