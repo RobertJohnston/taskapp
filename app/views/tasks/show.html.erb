@@ -1,0 +1,12 @@
+<h1>Show individual tasks</h1>
+
+<p>
+  <%= link_to "edit task", edit_task_path(@task) %>
+
+  <%= link_to("delete task", task_path(@task), method: :delete, data: {confirm: "Are you REALLY sure?"}) %>
+</p>
+
+<h2><%= @task.content %></h2>
+<h2><%= @task.performed %></h2>
+
+<p><%= link_to("Back to index", task_path) %></p>

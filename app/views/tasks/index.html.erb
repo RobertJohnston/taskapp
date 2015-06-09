@@ -1,0 +1,32 @@
+<h1>List of all tasks</h1>
+
+<p><%= link_to("New task", 'tasks/new') %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task:</th>
+      <th>Completed:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |t| %>
+      <tr>
+        <td><%= link_to(t.content, task_path(t)) %></td>
+        <td><%= t.performed %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>Total number of tasks: <%= @tasks.count %></p>
+
+<!--  the equals in <%= is only for presenting data
+
+    Should display a list of all tasks and, for each task:
+        a link to its show view (use a link_to helper)
+        a link to its edit view
+        a link to its delete action. Tips: a standard link does not allow to perform DELETE request, so here you should add a method: :delete option to your link_to helper.
+    Should include a link to the new view to create a new task
+
+-->
